@@ -7,7 +7,7 @@ Dealer::Dealer() : Person("Dealer") {
 
 }
 
-Dealer::Dealer(const char* name) : Person("Dealer") {
+Dealer::Dealer(const char* name) : Person(name) {
 
 }
 

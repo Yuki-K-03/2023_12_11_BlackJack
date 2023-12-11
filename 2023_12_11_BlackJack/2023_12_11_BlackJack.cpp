@@ -12,6 +12,7 @@ const char* CARD_SUIT[] = { "h", "d", "s", "c" };
 
 void ShowHand(Person& person) {
 	printf("========================\n");
+	printf("Dealer\n");
 	person.showName();
 	printf("\n\nHand\n");
 	person.showHand();
@@ -28,7 +29,7 @@ void ShowHand(Person& p1, Person& p2, Person& p3, Person& p4) {
 	for (int i = 0, end = size; i <= end; i++) {
 		printf("========================  ");
 	}
-	printf("\n");
+	printf("\nPlayers\n");
 	// 名前
 	for (int i = 0, end = size; i <= end; i++) {
 		players[i]->showName();
@@ -94,7 +95,7 @@ int main()
 	Player* players[4] = { &p1, &p2, &p3, &p4 };
 	int size = (sizeof players / sizeof players[0] - 1);
 
-	Dealer d;
+	Dealer d("Dealer");
 	Shoe shoe;
 	shoe._shuffle();
 
