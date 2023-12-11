@@ -12,13 +12,13 @@ const char* CARD_SUIT[] = { "h", "d", "s", "c" };
 
 
 void ShowHand(Person& person) {
-	printf("========================  \n"); // 26
+	printf("========================\n");
 	person.showName();
 	printf("\n\nHand\n");
 	person.showHand();
 	printf("\n\nScore\n");
 	person.showScore();
-	printf("\n========================  \n");
+	printf("\n========================\n");
 }
 
 void ShowHand(Person& p1, Person& p2, Person& p3, Person& p4) {
