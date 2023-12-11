@@ -35,15 +35,6 @@ void Player::PlayBase(Shoe& shoe) {
 		if (strcmp(str, "hit") == 0) {
 			//カードの配布
 			hit(shoe);
-
-			//手札の表示
-			printf("\n========================  \n");
-			showName();
-			printf("\n\nHand\n");
-			showHand();
-			printf("\n\nScore\n");
-			showScore();
-			printf("\n========================  \n");
 		}
 		else if (strcmp(str, "stand") == 0) {
 			break;
