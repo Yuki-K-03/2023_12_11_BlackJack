@@ -110,6 +110,8 @@ void Person::showName() const {
 }
 
 void Person::showHand() const {
+	//標準出力
+	cout << "\nHand\n";
 	//配列の最初から最後までを順に表示
 	int i = 0;
 	for (; i < _cardNum; i++) {

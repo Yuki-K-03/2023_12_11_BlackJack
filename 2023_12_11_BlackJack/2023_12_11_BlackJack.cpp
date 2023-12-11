@@ -71,15 +71,15 @@ static void showResult(Player& p1, Player& p2, Player& p3, Player& p4, Dealer& d
 	ShowHand(dealer);
 	ShowHand(p1, p2, p3, p4);
 
-	
+
 	for (int i = 0, end = size; i <= end; i++) {
 		if (players[i]->calcScore() > dealer.calcScore()) {
 			printf("%s Win\n", players[i]->getName());
-		}
+	}
 		else if (players[i]->calcScore() < dealer.calcScore()) {
 			printf("%s Lose\n", players[i]->getName());
-		}
-		else {
+	}
+	else {
 			printf("%s Push\n", players[i]->getName());
 		}
 	}
@@ -99,6 +99,7 @@ int main()
 	Shoe shoe;
 	shoe._shuffle();
 
+	printf("======================\n");
 	d.hit(shoe);
 	ShowHand(d);
 	d.hit(shoe);
@@ -117,6 +118,8 @@ int main()
 			dealerFlag = true;
 		}
 	}
+	ShowHand(p);
+	printf("======================\n");
 
 	if (dealerFlag) {
 		d.Play(shoe);
