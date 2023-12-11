@@ -99,7 +99,6 @@ int main()
 	Shoe shoe;
 	shoe._shuffle();
 
-	printf("======================\n");
 	d.hit(shoe);
 	ShowHand(d);
 	d.hit(shoe);
@@ -118,8 +117,6 @@ int main()
 			dealerFlag = true;
 		}
 	}
-	ShowHand(p);
-	printf("======================\n");
 
 	if (dealerFlag) {
 		d.Play(shoe);
