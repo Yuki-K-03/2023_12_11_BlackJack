@@ -24,6 +24,7 @@ void ShowHand(Person& p1, Person& p2, Person& p3, Person& p4) {
 	const Person* players[] = { &p1, &p2, &p3, &p4 };
 	int size = (sizeof players / sizeof players[0] - 1);
 
+	printf("\n");
 	for (int i = 0, end = size; i <= end; i++) {
 		printf("========================  ");
 	}
@@ -66,7 +67,6 @@ static void showResult(Player& p1, Player& p2, Player& p3, Player& p4, Dealer& d
 	printf("\n========================  \n");
 	printf("         RESULT           ");
 	printf("\n========================  \n");
-	printf("\n========================  \n");
 	ShowHand(dealer);
 	ShowHand(p1, p2, p3, p4);
 
@@ -102,16 +102,15 @@ int main()
 	ShowHand(d);
 	d.hit(shoe);
 	
-	for (int i = 0, end = (sizeof players / sizeof players[0] - 1); i <= end; i++) {
+	for (int i = 0, end = size; i <= end; i++) {
 		for (int j = 0; j < 2; j++) {
 			players[i]->hit(shoe);
 		}
 	}
-	printf("\n");
 	ShowHand(p1, p2, p3, p4);
 
 	bool dealerFlag = false;
-	for (int i = 0, end = (sizeof players / sizeof players[0] - 1); i <= end; i++) {
+	for (int i = 0, end = size; i <= end; i++) {
 		if (players[i]->Play(shoe)) {
 			dealerFlag = true;
 		}

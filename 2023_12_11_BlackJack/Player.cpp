@@ -20,6 +20,14 @@ void Player::PlayBase(Shoe& shoe) {
 	char str[HAND_SIZE] = {" "}; //文字列型
 	//バーストするまでループ処理
 	do {
+		//手札の表示
+		printf("\n========================  \n");
+		showName();
+		printf("\n\nHand\n");
+		showHand();
+		printf("\n\nScore\n");
+		showScore();
+		printf("\n========================  \n");
 		cout << "hit or stand >> ";
 
 		cin >> str; //文字列を入力
