@@ -8,7 +8,6 @@ class Player : public Person{
 public :
 	Player(const char* name);
 	virtual ~Player();
-	//using Person::Person;
 private :
 	void PlayBase(Shoe& shoe) override;
 };

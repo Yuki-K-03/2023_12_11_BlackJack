@@ -6,14 +6,12 @@ class Shoe;
 
 class Person {
 private:
-	//int _hand[HAND_SIZE];
 	Card _hand[HAND_SIZE];
 	int _cardNum;
 	char* _pName;
 	virtual void PlayBase(Shoe& shoe) = 0;
 
 public:
-	//void operator=(const Person other);
 	Person(const char *pName);
 	virtual ~Person();
 

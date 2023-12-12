@@ -7,7 +7,7 @@ void Card::operator=(const Card other) {
 }
 
 bool Card::operator==(const Card other) {
-	if (_cardNum == other._cardNum) {
+	if (_cardNum == other._cardNum && _cardSuit == other._cardSuit) {
 		return true;
 	}
 	else {

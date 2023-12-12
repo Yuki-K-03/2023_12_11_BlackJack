@@ -6,7 +6,6 @@
 class Shoe{
 private :
 public :
-	//int _cardShoe[CARD_MAX];
 	int _cardNum;
 	Card _cardShoe[CARD_MAX];
 
