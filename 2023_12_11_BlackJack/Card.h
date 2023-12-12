@@ -5,11 +5,6 @@ extern const char* CARD_NUMBER[];
 extern const char* CARD_SUIT[];
 
 
-struct CardKinds{
-	int CardNum;
-	int CardSuit;
-};
-
 class Card
 {
 protected :

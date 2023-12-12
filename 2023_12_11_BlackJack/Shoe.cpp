@@ -13,7 +13,7 @@ Shoe::Shoe() {
 
 	for (int i = 0; i < CARD_MAX; i++) {
 		num = i % NUMBER_MAX + 1;
-		suit = i / NUMBER_MAX;
+		suit = i / NUMBER_MAX + 1;
 		_cardShoe[i].SetCard(num, suit);
 	}
 }

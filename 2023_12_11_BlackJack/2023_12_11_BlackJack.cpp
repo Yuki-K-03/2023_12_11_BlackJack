@@ -7,7 +7,7 @@ using namespace std;
 
 const int NUMBER_MAX = 13;
 const char* CARD_NUMBER[] = { "Joker", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-const char* CARD_SUIT[] = { "h", "d", "s", "c" };
+const char* CARD_SUIT[] = { "None", "h", "d", "s", "c" };
 
 
 void ShowHand(Person& person) {
@@ -23,38 +23,38 @@ void ShowHand(Person& person) {
 
 void ShowHand(Person& p1, Person& p2, Person& p3, Person& p4) {
 	const Person* players[] = { &p1, &p2, &p3, &p4 };
-	int size = (sizeof players / sizeof players[0] - 1);
+	int size = (sizeof players / sizeof players[0]);
 
 	printf("\n");
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		printf("========================  ");
 	}
 	printf("\nPlayers\n");
 	// 名前
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		players[i]->showName();
 	}
 	printf("\n\n");
 	// 手札
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		printf("%-26s", "Hand");
 	}
 	printf("\n");
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		players[i]->showHand();
 	}
 	printf("\n\n");
 	// スコア
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		printf("%-26s", "Score");
 	}
 	printf("\n");
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		players[i]->showScore();
 	}
 	printf("\n");
 	
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		printf("========================  ");
 	}
 	printf("\n");
@@ -93,7 +93,7 @@ int main()
 	Player p3("Player3");
 	Player p4("Player4");
 	Player* players[4] = { &p1, &p2, &p3, &p4 };
-	int size = (sizeof players / sizeof players[0] - 1);
+	int size = (sizeof players / sizeof players[0]);
 
 	Dealer d("Dealer");
 	Shoe shoe;
@@ -103,7 +103,7 @@ int main()
 	ShowHand(d);
 	d.hit(shoe);
 	
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < 2; j++) {
 			players[i]->hit(shoe);
 		}
@@ -111,7 +111,7 @@ int main()
 	ShowHand(p1, p2, p3, p4);
 
 	bool dealerFlag = false;
-	for (int i = 0, end = size; i <= end; i++) {
+	for (int i = 0; i < size; i++) {
 		if (players[i]->Play(shoe)) {
 			dealerFlag = true;
 		}
