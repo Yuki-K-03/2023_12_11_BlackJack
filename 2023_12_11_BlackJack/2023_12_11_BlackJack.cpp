@@ -65,9 +65,9 @@ static void showResult(Player& p1, Player& p2, Player& p3, Player& p4, Dealer& d
 	const Player* players[] = { &p1, &p2, &p3, &p4 };
 	int size = (sizeof players / sizeof players[0] - 1);
 
-	printf("\n========================  \n");
+	printf("\n========================\n");
 	printf("         RESULT           ");
-	printf("\n========================  \n");
+	printf("\n========================\n");
 	ShowHand(dealer);
 	ShowHand(p1, p2, p3, p4);
 
@@ -88,7 +88,7 @@ static void showResult(Player& p1, Player& p2, Player& p3, Player& p4, Dealer& d
 int main()
 {
 	srand((unsigned int)time(NULL));
-	Player p1("Player1");
+ 	Player p1("Player1");
 	Player p2("Player2");
 	Player p3("Player3");
 	Player p4("Player4");
