@@ -1,10 +1,6 @@
 #include <iostream>
 #include "Card.h"
 
-void Card::operator=(const Card other) {
-	_cardNum = other._cardNum;
-	_cardSuit = other._cardSuit;
-}
 
 bool Card::operator==(const Card other) {
 	if (_cardNum == other._cardNum && _cardSuit == other._cardSuit) {
