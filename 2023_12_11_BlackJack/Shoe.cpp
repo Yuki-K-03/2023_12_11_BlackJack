@@ -23,12 +23,11 @@ Shoe::~Shoe() {
 }
 
 bool Shoe::takeCard(Card &card) {
-	card = _cardShoe[_cardNum];
-
-	if (card.GetNum() <= 0) {
+	if (_cardShoe[_cardNum].GetNum() < 0 && _cardShoe[_cardNum].GetSuit() < 0) {
 		return false;
 	}
 
+	card = _cardShoe[_cardNum];
 	_cardShoe[_cardNum].SetCard(-1, -1);
  	_cardNum--;
 

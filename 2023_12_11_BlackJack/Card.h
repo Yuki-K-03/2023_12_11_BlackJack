@@ -17,12 +17,9 @@ protected :
 	int _cardSuit;
 
 public :
-	void operator=(const Card other);
 	bool operator==(const Card other);
 	Card();
 	void SetCard(int num, int suit);
 	const int GetNum()  const;
 	const int GetSuit()  const;
-	const char* ShowNum() const;
-	const char* ShowSuit() const;
 };
